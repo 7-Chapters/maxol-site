@@ -1,7 +1,7 @@
 "use client";
-import { useState, useRef } from 'react';
-import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
-import emailjs from '@emailjs/browser';
+import { useState, useRef } from "react";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +9,7 @@ const ContactUs = () => {
     subject: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -53,7 +53,13 @@ const ContactUs = () => {
       )
       .then(
         (response) => {
-          setFormData({ name: "", subject: "", email: "", phone: "", message: "" });
+          setFormData({
+            name: "",
+            subject: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
           setIsLoading(false);
           setSuccess("Your message has been sent successfully");
         },
@@ -64,51 +70,65 @@ const ContactUs = () => {
         }
       );
   };
-  
-
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center  ">
+    <div className="min-h-screen w-full flex flex-col items-center px-4 sm:px-6 lg:px-8 py-8">
       <section className="flex flex-col xl:flex-row justify-center items-center gap-4 w-full max-w-5xl">
         
         {/* Left Side: General Information */}
-        <div className="w-full xl:w-1/3 p-4 rounded-lg ">
+        <div className="w-full xl:w-1/3 p-4 rounded-lg text-center xl:text-left">
           <h2 className="text-lg font-semibold mb-4">General Info</h2>
-          <p className="mt-4">
-          Registered Office :</p>
+          <p className="mt-4">Registered Office :</p>
           <h3 className="text-lg text-gray-700">Maxol (Private) Limited</h3>
-          <p className='text-gray-700'>
-            No. 75/14, D.L. Pathirage Mawatha,<br />
-            Gangodawila, Nugegoda (10250),<br />
+          <p className="text-gray-700">
+            No. 75/14, D.L. Pathirage Mawatha,
+            <br />
+            Gangodawila, Nugegoda (10250),
+            <br />
             Sri Lanka
           </p>
-          <p className="mt-4">
-          Operational Office :</p>
-          <p className='text-gray-700'>
-  66/3/3, Kirimetiyagara, <br />
-  Kadawatha (11850),<br />
-  Sri Lanka
-</p>
-          <div className="mt-4 flex space-x-2">
+          <p className="mt-4">Operational Office :</p>
+          <p className="text-gray-700">
+            66/3/3, Kirimetiyagara,
+            <br />
+            Kadawatha (11850),
+            <br />
+            Sri Lanka
+          </p>
+          <div className="mt-4 flex justify-center xl:justify-start space-x-2">
             <FaFacebook className="text-black" size={24} />
             <FaInstagram className="text-black" size={24} />
             <FaTiktok className="text-black" size={24} />
           </div>
           <p className="mt-4">
             Hotline:
-            <a className="text-gray-700" href="tel:+94773220022"> +94 773 220 022</a><br />
+            <a className="text-gray-700" href="tel:+94773220022">
+              {" "}
+              +94 773 220 022
+            </a>
+            <br />
             Mail:
-            <a className='text-gray-700'  href="mailto:maxol@maxolsl.com"> maxol@maxolsl.com</a>
+            <a className="text-gray-700" href="mailto:maxol@maxolsl.com">
+              {" "}
+              maxol@maxolsl.com
+            </a>
           </p>
         </div>
 
         {/* Right Side: Contact Form */}
-        <div className="w-full xl:w-2/3 p-4  rounded-lg">
-          <h1 className="text-2xl font-bold mb-6 text-center ">Get in touch with Us</h1>
-          <form onSubmit={sendEmail} ref={form} className="space-y-4 w-full max-w-md mx-auto">
-
+        <div className="w-full xl:w-2/3 p-4 rounded-lg">
+          <h1 className="text-2xl font-bold mb-6 text-center">
+            Get in touch with Us
+          </h1>
+          <form
+            onSubmit={sendEmail}
+            ref={form}
+            className="space-y-4 w-full max-w-md mx-auto"
+          >
             <div>
-              <label className="block text-gray-600 font-semibold mb-1">Name</label>
+              <label className="block text-gray-600 font-semibold mb-1">
+                Name
+              </label>
               <input
                 type="text"
                 name="name"
@@ -118,7 +138,9 @@ const ContactUs = () => {
               />
             </div>
             <div>
-              <label className="block text-gray-600 font-semibold mb-1">Subject</label>
+              <label className="block text-gray-600 font-semibold mb-1">
+                Subject
+              </label>
               <input
                 type="text"
                 name="subject"
@@ -129,7 +151,9 @@ const ContactUs = () => {
               />
             </div>
             <div>
-              <label className="block text-gray-600 font-semibold mb-1">Email</label>
+              <label className="block text-gray-600 font-semibold mb-1">
+                Email
+              </label>
               <input
                 type="email"
                 name="email"
@@ -140,7 +164,9 @@ const ContactUs = () => {
               />
             </div>
             <div>
-              <label className="block text-gray-600 font-semibold mb-1">Phone</label>
+              <label className="block text-gray-600 font-semibold mb-1">
+                Phone
+              </label>
               <input
                 type="tel"
                 name="phone"
@@ -151,7 +177,9 @@ const ContactUs = () => {
               />
             </div>
             <div>
-              <label className="block text-gray-600 font-semibold mb-1">Message</label>
+              <label className="block text-gray-600 font-semibold mb-1">
+                Message
+              </label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -163,23 +191,21 @@ const ContactUs = () => {
             <button
               type="submit"
               disabled={isLoading}
-
-              className="flex rounded-full border border-customGreen mt-4 px-6 py-2 font-medium hover:bg-customBlue hover:text-white mx-auto md:mx-0"
+              className="flex rounded-full border border-customGreen mt-4 px-6 py-2 font-medium hover:bg-customBlue hover:text-white text-center mx-auto"
             >
-              {isLoading? "Sending...": "Send Us"}
-
+              {isLoading ? "Sending..." : "Send Us"}
             </button>
           </form>
-          {error && <p className="text-red-500 mt-4">{error}</p>}
-          {success && <p className="text-green-500 mt-4">{success}</p>}
+          {error && <p className="text-red-500 mt-4 text-center">{error}</p>}
+          {success && <p className="text-green-500 mt-4 text-center">{success}</p>}
         </div>
-      </section>"
+      </section>
 
       {/* Bottom Section: Google Map */}
       <div className="w-full mt-8">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15844.631947371854!2d79.88297148783133!3d6.871665454357539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a4494919d1b%3A0x9a36b0f5258496e5!2sGangodawila%2C%20Nugegoda!5e0!3m2!1sen!2slk!4v1729981742781!5m2!1sen!2slk"
-          style={{ width: '100%', height: '400px', border: '0', maxWidth: '100vw' }}
+          style={{ width: "100%", height: "400px", border: "0", maxWidth: "100vw" }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
@@ -187,8 +213,6 @@ const ContactUs = () => {
       </div>
     </div>
   );
- 
-}
+};
 
 export default ContactUs;
-
