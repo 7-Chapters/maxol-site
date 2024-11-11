@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import productImage from '../assets/webbanner.png';
+import productImage from '../assets/Webbanner.png';
 import agriImage from '../assets/agri.webp';
 import IconSection from '@/components/Icon';
-import ProductDisplay from '@/components/ProductDisplay';
+import ProductDisplay from '@/components/ProductDIsplay';
 import Link from 'next/link';
 
 export default function Home() {
