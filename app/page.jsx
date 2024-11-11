@@ -3,7 +3,6 @@ import productImage from '../assets/webbanner.png';
 import agriImage from '../assets/agri.webp';
 import IconSection from '@/components/Icon';
 import ProductDisplay from '@/components/ProductDisplay';
-import HorticultureProduct from '@/components/HorticultureProduct';
 import Link from 'next/link';
 
 export default function Home() {

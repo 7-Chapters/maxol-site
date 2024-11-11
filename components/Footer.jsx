@@ -72,7 +72,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="text-center text-brown-700 text-sm px-6">
-        <p>&copy; 2024 | Maxol - All rights reserved</p>
+        <p>&copy; 2024 | Maxol - All rights reserved.Developed by 7 Chapters.</p>
       </div>
     </footer>
   );
