@@ -22,7 +22,7 @@ const Horticulture = () => {
         {/* Text Section - Aligned to Top and Left */}
         <div className="md:w-1/2 flex flex-col justify-start text-center md:text-left space-y-4">
           <h1 className="text-3xl md:text-4xl font-bold">
-            Welcome to Horticulture
+            Welcome to Herbal Medicinal Products
           </h1>
           <p className="text-gray-700">
             In Sri Lanka, in the distant past, information about herbs was inscribed on palm leaves with a pointed metal stylus which contained information on the curative properties of herbs, their food, medicinal and cosmetic values. We take pride in sourcing the finest herbs to create our herbal products. From soothing teas to revitalizing herbal remedies, each product is carefully crafted to harness the healing properties of nature. Our herbal offerings are designed to support your health, promote relaxation, and enhance your overall wellness. With MAXNATURE, you can indulge in the natural goodness that your body deserves.
@@ -33,13 +33,13 @@ const Horticulture = () => {
       {/* Herbal Products and Characteristics */}
       <div className="pt-12">
         <h1 className="text-2xl md:text-3xl font-bold text-center mb-8">
-          MAXNATURE Herbal Products
+          MAXNATURE Herbal Medicinal Products
         </h1>
         <div className="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
           {/* Characteristics of Herbal Products */}
           <div className="md:w-1/2">
             <h2 className="text-xl font-semibold mb-4 text-center md:text-left">
-              Characteristics of Herbal Products:
+              Characteristics of Herbal Medicinal Products:
             </h2>
             <ul className="list-disc pl-5 space-y-2 text-gray-700">
               <li>100% natural and no chemicals will be used</li>

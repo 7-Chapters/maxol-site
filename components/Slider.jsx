@@ -1,9 +1,12 @@
-"use client"; 
+"use client";
 import React, { useState } from "react";
+import Image from "next/image";
+import Herbal from "../assets/cocoblock.webp";
+import coco from "../assets/Herbalpowder.webp"
 
 const images = [
-  "/assets/herbaltea.webp", 
-  "/assets/cocobrik.webp",
+  { imgSrc: Herbal, alt: "Herbal Slide" },
+  { imgSrc: coco, alt: "Herbal Slide" },
 ];
 
 const Slider = () => {
@@ -21,6 +24,11 @@ const Slider = () => {
 
   return (
     <div className="relative w-full max-w-xl mx-auto overflow-hidden">
+        <div className="flex flex-col items-center space-y-6 pb-10">
+      <h1 className="text-3xl md:text-4xl font-bold">
+           Our Products
+          </h1>
+      </div>
       {/* Slide Container */}
       <div
         className="flex transition-transform duration-500 ease-in-out"
@@ -28,26 +36,30 @@ const Slider = () => {
       >
         {images.map((image, index) => (
           <div key={index} className="min-w-full">
-            <img
-              src={image}
-              alt={`Slide ${index + 1}`}
+            <Image
+              src={image.imgSrc}
+              alt={image.alt}
+              layout="responsive"
+              width={700}
+              height={400}
+              priority
               className="object-cover w-full h-64"
             />
           </div>
         ))}
       </div>
 
-      {/* Previous Button */}
+      {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
+        aria-label="Previous slide"
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
       >
         ❮
       </button>
-
-      {/* Next Button */}
       <button
         onClick={nextSlide}
+        aria-label="Next slide"
         className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
       >
         ❯
@@ -59,6 +71,7 @@ const Slider = () => {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
+            aria-label={`Go to slide ${index + 1}`}
             className={`w-3 h-3 rounded-full ${
               currentIndex === index ? "bg-gray-800" : "bg-gray-400"
             }`}

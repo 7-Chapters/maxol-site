@@ -2,7 +2,7 @@ import Image from 'next/image';
 import productImage from '../assets/Webbanner.png';
 import agriImage from '../assets/agri.webp';
 import IconSection from '@/components/Icon';
-import ProductDisplay from '@/components/ProductDIsplay';
+import Slider from '../components/Slider';
 import Link from 'next/link';
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
             in Every Product.
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-700">
-            A brief description or catchy phrase.
+          Eco-Friendly Solutions for a Healthier Tomorrow.
           </p>
         </div>
       </div>
@@ -67,9 +67,10 @@ export default function Home() {
       </div>
 
       {/* Product Display Sections */}
-      <div className="w-full flex justify-center items-center mt-[50px] mb-[50px]">
-        <ProductDisplay />
-      </div>
+      <div className="min-h-screen flex items-center justify-center ">
+      <Slider/>
+    </div>
+
       
     </div>
   );
