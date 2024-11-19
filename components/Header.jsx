@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image"; 
 import logo from "../assets/Maxol logo without bg.png"; 
+import maxlogo from "../assets/Maxnature logo without bg.png";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 
@@ -13,6 +14,16 @@ const Header = () => {
             src={logo} 
             alt="MAXOL Logo" 
             width={100} 
+            height={50} 
+            priority
+          />
+        </Link>
+
+        <Link href="/">
+          <Image 
+            src={maxlogo} 
+            alt="MAXOL Logo" 
+            width={70} 
             height={50} 
             priority
           />

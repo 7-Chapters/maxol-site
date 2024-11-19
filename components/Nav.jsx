@@ -17,7 +17,7 @@ const links = [
         path: "/cocopeat",
     },
     {
-        name: "horticulture",
+        name: "Herbal Medicinal Products",
         path: "/horticulture",
     },
 ];

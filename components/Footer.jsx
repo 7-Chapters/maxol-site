@@ -8,7 +8,7 @@ const links = [
     { name: "home", path: "/" },
     { name: "about us", path: "/about-us" },
     { name: "cocopeat", path: "/cocopeat" },
-    { name: "horticulture", path: "/horticulture" },
+    { name: "Herbal Medicinal Products", path: "/horticulture" },
 ];
 
 const Footer = () => {
@@ -29,7 +29,7 @@ const Footer = () => {
           <ul className="space-y-2">
             {links.map((link, index) => (
               <li key={index}>
-                <a href={link.path} className="capitalize" target="_blank" rel="noopener noreferrer">{link.name}</a>
+                <a href={link.path} className="capitalize" rel="noopener noreferrer">{link.name}</a>
               </li>
             ))}
           </ul>
