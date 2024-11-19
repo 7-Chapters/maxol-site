@@ -26,7 +26,7 @@ const Cocopeat = () => {
             Welcome to Cocopeat
           </h1>
           <p className="text-gray-700">
-            MAXNATURE premium cocopeat is derived from the husks of coconuts, transformed into an exceptional growing medium. It's not just environmentally friendly, it’s engineered to improve soil quality, retain moisture, and provide optimum aeration for plants. Whether you are a seasoned gardener or a beginner, MAXNATURE cocopeat empowers you to cultivate lush gardens and thriving plants while reducing your ecological footprint.
+            MAXNATURE premium cocopeat is derived from the husks of coconuts, transformed into an exceptional growing medium. It&apos;s not just environmentally friendly, it&apos;s engineered to improve soil quality, retain moisture, and provide optimum aeration for plants. Whether you are a seasoned gardener or a beginner, MAXNATURE cocopeat empowers you to cultivate lush gardens and thriving plants while reducing your ecological footprint.
           </p>
         </div>
       </div>
@@ -74,23 +74,22 @@ const Cocopeat = () => {
         </div>
 
         {/* Packaging and Certifications - Single Line for Each */}
-<div className="mt-12">
-  <div className="space-y-4">
-    {/* MAXNATURE Packaging */}
-    <p className="text-lg flex flex-wrap items-start md:items-center">
-      <span className="font-semibold whitespace-nowrap">MAXNATURE Packaging:</span>
-      &nbsp;<span className="text-gray-700">Complexion of packaging depends on buyer requirements.</span>
-    </p>
+        <div className="mt-12">
+          <div className="space-y-4">
+            {/* MAXNATURE Packaging */}
+            <p className="text-lg flex flex-wrap items-start md:items-center">
+              <span className="font-semibold whitespace-nowrap">MAXNATURE Packaging:</span>
+              &nbsp;<span className="text-gray-700">Complexion of packaging depends on buyer requirements.</span>
+            </p>
 
-    {/* Certifications */}
-    <p className="text-lg flex flex-wrap items-start md:items-center">
-      <span className="font-semibold whitespace-nowrap">Certifications:</span>
-      &nbsp;<span className="text-gray-700">As requested by the buyer with the confirmed order.</span>
-    </p>
-  </div>
-</div>
-</div>
-
+            {/* Certifications */}
+            <p className="text-lg flex flex-wrap items-start md:items-center">
+              <span className="font-semibold whitespace-nowrap">Certifications:</span>
+              &nbsp;<span className="text-gray-700">As requested by the buyer with the confirmed order.</span>
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Gallery Section */}
       <div className="pt-12 text-center">
